@@ -1,0 +1,45 @@
+.img {
+  width: 30px;
+}
+
+.description {
+  font-family: var(--montserrat-font);
+  font-weight: 600;
+  font-size: 0.938rem;
+  margin-top: 35px;
+}
+
+.containerunselected {
+  width: 130px;
+  padding: 20px;
+  border: 1px solid #ebebeb;
+  border-radius: 12px;
+}
+
+.containerhover {
+  width: 130px;
+  padding: 20px;
+  border: 1px solid black;
+  border-radius: 12px;
+}
+
+.tiny {
+  margin-left: 5px;
+  width: 120px;
+  margin-top: 5px;
+  padding-top: 15px;
+}
+
+.containerselected {
+  background-color: #ebebeb;
+  width: 130px;
+  padding: 20px;
+  border: 1px solid black;
+  border-radius: 12px;
+}
+
+.shadowdiv {
+  width: 150px;
+  padding: 0px;
+  background-color: white;
+}

@@ -1,123 +1,206 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import { Inter } from '@next/font/google'
-import styles from '@/styles/Home.module.css'
+import Head from "next/head";
+import Header from "@/components/Header.js";
+import SearchForm from "@/components/SearchForm.js";
+import styles from "@/styles/Index.module.scss";
+import Link from "next/link";
+import CategoryBar from "@/components/CategoryBar";
+import HomeProperty from "@/components/HomeProperty/HomeProperty.js";
+import RadioButton from "@/components/RadioButton.js";
+import FilterContainer from "@/components/FilterContainer.js";
+import React from "react";
+import Checkbox from "@/components/Checkbox.js";
+import PropertyTypeB from "@/components/PropertyTypeB.js";
+import { motion } from "framer-motion";
+import OuterFilterContainer from "@/components/OuterFilterContainer.js";
+import Json from "@/components/jsondata.js";
 
-const inter = Inter({ subsets: ['latin'] })
+let categories = [
+  "All homes",
+  "National parks",
+  "Mansions",
+  "Castles",
+  "Golfing",
+  "Amazing pools",
+  "Amazing views",
+  "Golfing",
+  "Off-the-grid",
+  "Lakefront",
+  "Design",
+  "Play",
+  "Adapted",
+  "Treehouses",
+  "Historical homes",
+];
+
+let imgArray;
+
+export const SearchFilterContext = React.createContext();
 
 export default function Home() {
+  const [visibility, setVisibility] = React.useState(false);
+  const [selectedCategory, setSelectedCategory] = React.useState("All homes");
+  function updateVisibility() {
+    setVisibility((prev) => !prev);
+  }
+
+  const [searchState, setSearchState] = React.useState({
+    region: "I'm flexible",
+    guests: 0,
+  });
+
+  const [searchIncrement, setSearchIncrement] = React.useState(0);
+  const [filtered2, setFiltered2] = React.useState(false);
+
+  let value = {
+    searchState,
+    setSearchState,
+    searchIncrement,
+    setSearchIncrement,
+  };
+
+  let preFiltered = Json;
+  let filtered1;
+
+  React.useEffect(() => {
+    let nextFilter;
+    if (selectedCategory == "All homes") {
+      filtered1 = preFiltered;
+    } else {
+      filtered1 = preFiltered.filter(
+        (property) => property.category == selectedCategory
+      );
+    }
+    if (searchState.region == "I'm flexible" && searchState.guests == 0) {
+      setFiltered2(filtered1);
+      nextFilter = filtered1;
+    } else if (searchState.region == "I'm flexible") {
+      if (parseInt(searchState.guests) >= 8) {
+        setFiltered2(() => {
+          return filtered1.filter(
+            (property) => parseInt(property.number_beds) >= 8
+          );
+        });
+        nextFilter = filtered1.filter(
+          (property) => parseInt(property.number_beds) >= 8
+        );
+      } else {
+        setFiltered2(() => {
+          return filtered1.filter(
+            (property) =>
+              parseInt(property.number_beds) >= parseInt(searchState.guests)
+          );
+        });
+        nextFilter = filtered1.filter(
+          (property) =>
+            parseInt(property.number_beds) >= parseInt(searchState.guests)
+        );
+      }
+    }
+    //if there are 8 guests or more, allow only houses with 8+ beds
+    else {
+      if (parseInt(searchState.guests) >= 8) {
+        setFiltered2(() => {
+          return filtered1.filter(
+            (property) =>
+              parseInt(property.number_beds) >= 8 &&
+              (property.Region1 == searchState.region ||
+                property.Region2 == searchState.region)
+          );
+        });
+        nextFilter = filtered1.filter(
+          (property) =>
+            parseInt(property.number_beds) >= 8 &&
+            (property.Region1 == searchState.region ||
+              property.Region2 == searchState.region)
+        );
+      } else {
+        // if there are less than 8 guests, check that guests are below beds and check regions
+        setFiltered2(() => {
+          return filtered1.filter(
+            (property) =>
+              parseInt(property.number_beds) >= parseInt(searchState.guests) &&
+              (searchState.region == property.Region1 ||
+                searchState.region == property.Region2)
+          );
+        });
+        nextFilter = filtered1.filter(
+          (property) =>
+            parseInt(property.number_beds) >= parseInt(searchState.guests) &&
+            (searchState.region == property.Region1 ||
+              searchState.region == property.Region2)
+        );
+      }
+    }
+    imgArray = [];
+    for (let i = 1; i < nextFilter.length + 1; i++) {
+      imgArray[i - 1] = [];
+      for (let j = 1; j < 6; j++) {
+        let link = `/images/property_images/${nextFilter[i - 1].id}/${
+          nextFilter[i - 1].id
+        }${j}.webp`;
+        imgArray[i - 1].push(link);
+      }
+    }
+  }, [selectedCategory, searchIncrement]);
+
+  let gridRowsVariable = "";
+  if (filtered2 != false) {
+    let gridRows = parseInt(filtered2.length / 4) + 1;
+    for (let i = 0; i < gridRows; i++) {
+      gridRowsVariable += "20vw ";
+    }
+  }
+
+  console.log(imgArray);
+
   return (
     <>
       <Head>
-        <title>Create Next App</title>
+        <title>Airbnb</title>
         <meta name="description" content="Generated by create next app" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={styles.main}>
-        <div className={styles.description}>
-          <p>
-            Get started by editing&nbsp;
-            <code className={styles.code}>src/pages/index.js</code>
-          </p>
-          <div>
-            <a
-              href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              By{' '}
-              <Image
-                src="/vercel.svg"
-                alt="Vercel Logo"
-                className={styles.vercelLogo}
-                width={100}
-                height={24}
-                priority
-              />
-            </a>
+      <SearchFilterContext.Provider value={value}>
+        <Header />
+      </SearchFilterContext.Provider>
+      <CategoryBar
+        categories={categories}
+        updateVisibility={updateVisibility}
+        selectedCategory={selectedCategory}
+        setSelectedCategory={setSelectedCategory}
+      />
+      <main>
+        {imgArray && (
+          <div
+            className={styles.carouselwrapper}
+            style={{ gridTemplateRows: gridRowsVariable }}
+          >
+            {filtered2.map((property, index) => {
+              return (
+                <HomeProperty
+                  carouselImages={imgArray[index]}
+                  price={property.price}
+                  stars="5.0"
+                  location={`${property.city_id}, ${property.country}`}
+                  key={index}
+                  index={index}
+                />
+              );
+            })}
           </div>
-        </div>
-
-        <div className={styles.center}>
-          <Image
-            className={styles.logo}
-            src="/next.svg"
-            alt="Next.js Logo"
-            width={180}
-            height={37}
-            priority
-          />
-          <div className={styles.thirteen}>
-            <Image
-              src="/thirteen.svg"
-              alt="13"
-              width={40}
-              height={31}
-              priority
-            />
-          </div>
-        </div>
-
-        <div className={styles.grid}>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Docs <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Find in-depth information about Next.js features and&nbsp;API.
-            </p>
-          </a>
-
-          <a
-            href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Learn <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Learn about Next.js in an interactive course with&nbsp;quizzes!
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Templates <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Discover and deploy boilerplate example Next.js&nbsp;projects.
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Deploy <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Instantly deploy your Next.js site to a shareable URL
-              with&nbsp;Vercel.
-            </p>
-          </a>
-        </div>
+        )}
+        <OuterFilterContainer
+          visibility={visibility}
+          updateVisibility={updateVisibility}
+        />
+        <div
+          className={visibility ? styles.grey : styles.hidden}
+          onClick={updateVisibility}
+        ></div>
       </main>
     </>
-  )
+  );
 }
+
+//can also do router.push

@@ -1,0 +1,21 @@
+.filterfooter {
+  height: 80px;
+  width: 700px;
+  background-color: white;
+  padding: 0px 30px;
+  border-radius: 0px 0px 20px 20px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.submit {
+  background-color: black;
+  color: white;
+  padding: 15px 30px;
+  font-family: var(--montserrat-font);
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: 5px;
+  border: 1px solid black;
+}

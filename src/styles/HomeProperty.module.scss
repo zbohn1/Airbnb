@@ -1,0 +1,28 @@
+.toplinewrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.propertywrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.pricewrapper {
+  display: flex;
+  align-items: flex-end;
+  gap: 5px;
+}
+
+.location {
+  line-height: 19px;
+}
+
+.stars {
+  line-height: 19px;
+}
+
+.priceline {
+  margin-top: 5px;
+}

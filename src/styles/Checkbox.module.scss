@@ -1,0 +1,42 @@
+.container {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.checkbox {
+  display: none;
+}
+
+.checkmark {
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #000;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.checkmarkIcon {
+  position: absolute;
+  top: 0px;
+  left: 8px;
+  width: 5px;
+  height: 12px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+}
+
+.label {
+  margin-left: 15px;
+  font-size: 0.938rem;
+  color: black;
+  font-family: var(--montserrat-font);
+  font-weight: 400;
+}
+
+.sublabel {
+  margin-left: 39px;
+  font-size: 0.8rem;
+}

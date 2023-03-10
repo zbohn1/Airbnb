@@ -1,0 +1,71 @@
+.header {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  padding: 15px 80px;
+  background-color: white;
+  border-bottom: 1px solid #ebebeb;
+  position: relative;
+  z-index: 6;
+  position: relative;
+}
+
+.logo {
+  width: 100px;
+}
+
+.headeritem1 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.headeritem2 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.headeritem3 {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.headerlengthen {
+  position: absolute;
+  top: 100%;
+  left: 0%;
+  width: 100%;
+  height: 73px;
+  background-color: white;
+  z-index: 5;
+  transition: height 0.35s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.headershorten {
+  position: absolute;
+  top: 100%;
+  left: 0%;
+  width: 100%;
+  height: 0px;
+  background-color: white;
+  z-index: 5;
+  transition: height 0.35s ease-in-out;
+}
+
+.opacitylayer {
+  background-color: grey;
+  opacity: 0.5;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 100%;
+  transition: background-color 5s ease-in-out;
+  z-index: -1;
+}

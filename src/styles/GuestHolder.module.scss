@@ -1,0 +1,16 @@
+.wrapper {
+  position: absolute;
+  right: 0;
+  top: 80px;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 10px 40px;
+  border-radius: 25px;
+  border: 1px solid #ebebeb;
+  gap: 30px;
+}
+
+.hidden {
+  display: none;
+}

@@ -1,0 +1,21 @@
+.selected {
+  background-color: black;
+  color: white;
+  padding: 11px 21px;
+  border: 2px solid black;
+  border-radius: 40%;
+}
+
+.unselected {
+  background-color: white;
+  padding: 11px 21px;
+  border: 2px solid #ebebeb;
+  border-radius: 40%;
+}
+
+.hoverbutton {
+  background-color: white;
+  padding: 11px 21px;
+  border: 2px solid black;
+  border-radius: 40%;
+}

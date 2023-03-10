@@ -1,0 +1,31 @@
+.filtercontainer {
+  width: 700px;
+  height: 500px;
+  background-color: white;
+  border: 1px solid #ebebeb;
+  z-index: 10;
+  padding: 30px;
+  overflow-y: scroll;
+}
+
+.filtercontainenrhidden {
+  display: none;
+}
+
+.typeofflex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.flexproperty {
+  display: flex;
+  gap: 30px;
+}
+
+.amenityflex {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 10px;
+}

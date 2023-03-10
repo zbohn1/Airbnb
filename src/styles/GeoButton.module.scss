@@ -1,0 +1,29 @@
+.title {
+  font-family: var(--montserrat-font);
+  font-weight: 400;
+  font-size: 13px;
+  margin-top: 10px;
+}
+
+.imgunselected {
+  border: 1px solid #ebebeb;
+  border-radius: 9px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.imgselected {
+  border: 1px solid black;
+  border-radius: 9px;
+  position: absolute;
+}
+
+.tiny {
+  width: 110px;
+  border: 1px solid black;
+  border-radius: 9px;
+  position: absolute;
+  left: 5px;
+  top: 5px;
+}

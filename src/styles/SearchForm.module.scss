@@ -1,0 +1,127 @@
+.where {
+  width: 265px;
+  font-family: var(--montserrat-font);
+  font-weight: 700;
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+
+.searchregion {
+  width: 265px;
+  font-family: var(--montserrat-font);
+  font-weight: 400;
+  font-size: 0.75rem;
+}
+
+.who {
+  font-family: var(--montserrat-font);
+  font-weight: 700;
+  font-size: 0.75rem;
+  margin-bottom: 4px;
+}
+
+.addguests {
+  font-family: var(--montserrat-font);
+  font-weight: 400;
+  font-size: 0.75rem;
+}
+
+.visibleform {
+  background-color: #ebebeb;
+  flex-basis: 595px;
+  display: flex;
+  border-radius: 25px;
+  height: 65px;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.linerrselect {
+  left: 25px;
+  top: 0;
+  width: 627px;
+  position: absolute;
+  height: 64px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #f0f0f0;
+  border-radius: 0px 25px 25px 0px;
+}
+
+.linergselect {
+  right: 23px;
+  top: 0;
+  width: 610px;
+  position: absolute;
+  height: 64px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #f0f0f0;
+  border-radius: 25px 0px 0px 25px;
+}
+
+.hiddenform {
+  display: none;
+}
+
+.rbuttoncontainer {
+  padding: 17px 30px;
+  border-radius: 25px;
+  position: relative;
+  z-index: 1;
+}
+
+.rbuttoncontainerselected {
+  background-color: white;
+  padding: 17px 30px;
+  border-radius: 25px;
+  z-index: 1;
+  filter: drop-shadow(0px 0px 1px #f1eced);
+  position: relative;
+}
+
+.gbuttoncontainer {
+  padding: 8px 30px;
+  border-radius: 25px;
+  display: flex;
+  justify-content: space-between;
+  width: 270px;
+  align-items: center;
+  z-index: 1;
+  position: relative;
+}
+
+.gbuttoncontainerselected {
+  padding: 8px 10px 8px 30px;
+  border-radius: 25px;
+  display: flex;
+  justify-content: space-between;
+  width: 270px;
+  align-items: center;
+  background-color: white;
+  z-index: 1;
+  filter: drop-shadow(0px 0px 1px #f1eced);
+  position: relative;
+}
+
+.gbutton {
+  width: 115px;
+  background-color: #d2365a;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  border: none;
+  color: white;
+  gap: 8px;
+  font-family: var(--montserrat-font);
+  font-size: 15px;
+  position: relative;
+  font-weight: 500;
+}
+
+.gbuttoninnercontainer {
+  height: min-content;
+}

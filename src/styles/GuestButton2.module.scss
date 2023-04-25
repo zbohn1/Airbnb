@@ -1,0 +1,23 @@
+.button {
+  width: 330px;
+  padding: 10px 14px;
+  background-color: white;
+  border: solid black;
+  border-top: 0px;
+  border-right: 1px solid black;
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
+  cursor: pointer;
+}
+
+.buttonflex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.guestwording {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}

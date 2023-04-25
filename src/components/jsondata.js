@@ -22,11 +22,13 @@ const Json = [
     city_id: "Fraser",
     category: "National parks",
     extra_benefits1: "Self check-in",
-    extra_benefits_description: "",
-    extra_benefits2: "",
-    extra_benefits2_description: "",
-    extra_benefits3: "",
-    extra_benefits3_description: "",
+    extra_benefits1_description: "Check in with the lockbox",
+    extra_benefits2: "Dedicated workspace",
+    extra_benefits2_description:
+      "A private room with wifi that’s well-suited for working.",
+    extra_benefits3: "Superhost",
+    extra_benefits3_description:
+      "Superhosts are experienced, highly rated hosts who are committed to providing great stays for guests.",
     amenity1: "Mountain view",
     amenity2: "Dedicated workspace",
     amenity3: "TV",
@@ -72,7 +74,7 @@ const Json = [
     city_id: "Tetenbull",
     category: "National parks",
     extra_benefits1: "Dedicated workspace",
-    extra_benefits_description:
+    extra_benefits1_description:
       "A private room with wifi that’s well-suited for working.",
     extra_benefits2: "Self check-in",
     extra_benefits2_description: "Check yourself in with the lockbox.",
@@ -116,7 +118,7 @@ const Json = [
     property_type: "House",
     room_type: "Shared room",
     language1: "English",
-    language2: "France",
+    language2: "French",
     Region1: "Europe",
     Region2: "",
     country: "France",
@@ -124,7 +126,7 @@ const Json = [
     city_id: "Estaing",
     category: "National parks",
     extra_benefits1: "Dedicated workspace",
-    extra_benefits_description:
+    extra_benefits1_description:
       "A private room with wifi that’s well-suited for working.",
     extra_benefits2: "Great location",
     extra_benefits2_description:
@@ -177,7 +179,7 @@ const Json = [
     city_id: "CU",
     category: "National parks",
     extra_benefits1: "Great check-in experience",
-    extra_benefits_description:
+    extra_benefits1_description:
       "100% of recent guests gave the check-in process a 5-star rating.",
     extra_benefits2: "Park for free",
     extra_benefits2_description:
@@ -229,7 +231,7 @@ const Json = [
     city_id: "Santiago",
     category: "National parks",
     extra_benefits1: "Self check-in",
-    extra_benefits_description: "Check yourself in with the lockbox.",
+    extra_benefits1_description: "Check yourself in with the lockbox.",
     extra_benefits2: "Superhost",
     extra_benefits2_description:
       "Superhosts are experienced, highly rated hosts who are committed to providing great stays for guests.",
@@ -279,12 +281,12 @@ const Json = [
     state: "",
     city_id: "Manuel Antonio",
     category: "National parks",
-    extra_benefits1: "Dedicated worksapce",
-    extra_benefits_description:
+    extra_benefits1: "Dedicated workspace",
+    extra_benefits1_description:
       "A private room with wifi that’s well-suited for working.",
-    extra_benefits2: "Dive right in",
+    extra_benefits2: "Superhost",
     extra_benefits2_description:
-      "This is one of the few places in the area with a pool.",
+      "Superhosts are experienced, highly rated hosts who are committed to providing great stays for guests.",
     extra_benefits3: "",
     extra_benefits3_description: "",
     amenity1: "Garden view",
@@ -331,7 +333,7 @@ const Json = [
     city_id: "Baja California",
     category: "National parks",
     extra_benefits1: "Self check-in",
-    extra_benefits_description: "You can check in with the doorman",
+    extra_benefits1_description: "You can check in with the doorman",
     extra_benefits2: "Superhost",
     extra_benefits2_description:
       "Superhosts are experienced, highly rated hosts who are committed to providing great stays for guests.",
@@ -382,7 +384,7 @@ const Json = [
     city_id: "Cardonal",
     category: "National parks",
     extra_benefits1: "Dedicated workspace",
-    extra_benefits_description:
+    extra_benefits1_description:
       "A private room with wifi that’s well-suited for working.",
     extra_benefits2: "Self check-in",
     extra_benefits2_description: "You can check in with the doorman",
@@ -434,7 +436,7 @@ const Json = [
     city_id: "Aspa Bruk",
     category: "Mansions",
     extra_benefits1: "Dedicated workspace",
-    extra_benefits_description:
+    extra_benefits1_description:
       "A private room with wifi that’s well-suited for working.",
     extra_benefits2: "Self check-in",
     extra_benefits2_description: "Check yourself in with the lockbox.",
@@ -486,7 +488,7 @@ const Json = [
     city_id: "Poggibonsi",
     category: "Mansions",
     extra_benefits1: "Superhost",
-    extra_benefits_description:
+    extra_benefits1_description:
       "Superhosts are experienced, highly rated hosts who are committed to providing great stays for guests.",
     extra_benefits2: "",
     extra_benefits2_description: "",
@@ -537,7 +539,7 @@ const Json = [
     city_id: "Anghiari",
     category: "Castles",
     extra_benefits1: "Superhost",
-    extra_benefits_description:
+    extra_benefits1_description:
       "Superhosts are experienced, highly rated hosts who are committed to providing great stays for guests.",
     extra_benefits2: "",
     extra_benefits2_description: "",
@@ -588,7 +590,7 @@ const Json = [
     city_id: "Ravello",
     category: "Castles",
     extra_benefits1: "Superhost",
-    extra_benefits_description:
+    extra_benefits1_description:
       "Superhosts are experienced, highly rated hosts who are committed to providing great stays for guests.",
     extra_benefits2: "Great location",
     extra_benefits2_description:
@@ -640,7 +642,7 @@ const Json = [
     city_id: "Torno",
     category: "Caves",
     extra_benefits1: "Superhost",
-    extra_benefits_description:
+    extra_benefits1_description:
       "Superhosts are experienced, highly rated hosts who are committed to providing great stays for guests.",
     extra_benefits2: "Self check-in",
     extra_benefits2_description: "You can check in with the doorman",
@@ -691,7 +693,7 @@ const Json = [
     city_id: "MODICA",
     category: "Caves",
     extra_benefits1: "Superhost",
-    extra_benefits_description:
+    extra_benefits1_description:
       "Superhosts are experienced, highly rated hosts who are committed to providing great stays for guests.",
     extra_benefits2: "Great location",
     extra_benefits2_description:
@@ -743,7 +745,7 @@ const Json = [
     city_id: "Macheren",
     category: "Amazing pools",
     extra_benefits1: "Superhost",
-    extra_benefits_description:
+    extra_benefits1_description:
       "Superhosts are experienced, highly rated hosts who are committed to providing great stays for guests.",
     extra_benefits2: "Self check-in",
     extra_benefits2_description: "Check yourself in with the lockbox.",
@@ -794,7 +796,7 @@ const Json = [
     city_id: "London",
     category: "Amazing pools",
     extra_benefits1: "Superhost",
-    extra_benefits_description:
+    extra_benefits1_description:
       "Superhosts are experienced, highly rated hosts who are committed to providing great stays for guests.",
     extra_benefits2: "",
     extra_benefits2_description: "",
@@ -844,8 +846,8 @@ const Json = [
     state: "",
     city_id: "Liberia",
     category: "Amazing views",
-    extra_benefits1: "Free cancellation for 48 hours",
-    extra_benefits_description: "",
+    extra_benefits1: "Free cancellation",
+    extra_benefits1_description: "",
     extra_benefits2: "",
     extra_benefits2_description: "",
     extra_benefits3: "",
@@ -895,7 +897,7 @@ const Json = [
     city_id: "Jaco",
     category: "Amazing views",
     extra_benefits1: "Superhost",
-    extra_benefits_description:
+    extra_benefits1_description:
       "Superhosts are experienced, highly rated hosts who are committed to providing great stays for guests.",
     extra_benefits2: "",
     extra_benefits2_description: "",
@@ -946,7 +948,7 @@ const Json = [
     city_id: "Lancashire",
     category: "Golfing",
     extra_benefits1: "Self check-in",
-    extra_benefits_description: "Check yourself in with the lockbox.",
+    extra_benefits1_description: "Check yourself in with the lockbox.",
     extra_benefits2: "Great location",
     extra_benefits2_description:
       "100% of recent guests gave the location a 5-star rating.",
@@ -997,7 +999,7 @@ const Json = [
     city_id: "Garches",
     category: "Golfing",
     extra_benefits1: "Great for remote work",
-    extra_benefits_description:
+    extra_benefits1_description:
       "Fast wifi at 329 Mbps, plus a dedicated workspace in a common area.",
     extra_benefits2: "",
     extra_benefits2_description: "",
@@ -1048,7 +1050,7 @@ const Json = [
     city_id: "Ahmedabad",
     category: "Creative spaces",
     extra_benefits1: "Great for remote work",
-    extra_benefits_description:
+    extra_benefits1_description:
       "Fast wifi at 329 Mbps, plus a dedicated workspace in a common area.",
     extra_benefits2: "Superhost",
     extra_benefits2_description:
@@ -1100,7 +1102,7 @@ const Json = [
     city_id: "Panama",
     category: "Creative spaces",
     extra_benefits1: "Dedicated workspace",
-    extra_benefits_description:
+    extra_benefits1_description:
       "A private room with wifi that’s well-suited for working.",
     extra_benefits2: "Self check-in",
     extra_benefits2_description: "You can check in with the doorman",
@@ -1151,7 +1153,7 @@ const Json = [
     city_id: "Laugharne",
     category: "Off-the-grid",
     extra_benefits1: "Superhost",
-    extra_benefits_description:
+    extra_benefits1_description:
       "Superhosts are experienced, highly rated hosts who are committed to providing great stays for guests.",
     extra_benefits2: "Great location",
     extra_benefits2_description:
@@ -1203,7 +1205,7 @@ const Json = [
     city_id: "Glencruitten",
     category: "Off-the-grid",
     extra_benefits1: "Superhost",
-    extra_benefits_description:
+    extra_benefits1_description:
       "Superhosts are experienced, highly rated hosts who are committed to providing great stays for guests.",
     extra_benefits2: "Great location",
     extra_benefits2_description:
@@ -1255,7 +1257,7 @@ const Json = [
     city_id: "Heroica Puebla de Zaragoza",
     category: "Lakefront",
     extra_benefits1: "Superhost",
-    extra_benefits_description:
+    extra_benefits1_description:
       "Superhosts are experienced, highly rated hosts who are committed to providing great stays for guests.",
     extra_benefits2: "",
     extra_benefits2_description: "",
@@ -1306,7 +1308,7 @@ const Json = [
     city_id: "Tequesquitengo",
     category: "Lakefront",
     extra_benefits1: "Superhost",
-    extra_benefits_description:
+    extra_benefits1_description:
       "Superhosts are experienced, highly rated hosts who are committed to providing great stays for guests.",
     extra_benefits2: "Dedicated workspace",
     extra_benefits2_description:
@@ -1358,7 +1360,7 @@ const Json = [
     city_id: "Birdlip",
     category: "Design",
     extra_benefits1: "Superhost",
-    extra_benefits_description:
+    extra_benefits1_description:
       "Superhosts are experienced, highly rated hosts who are committed to providing great stays for guests.",
     extra_benefits2: "Dedicated workspace",
     extra_benefits2_description:
@@ -1410,7 +1412,7 @@ const Json = [
     city_id: "Danta Beach",
     category: "Design",
     extra_benefits1: "Superhost",
-    extra_benefits_description:
+    extra_benefits1_description:
       "Superhosts are experienced, highly rated hosts who are committed to providing great stays for guests.",
     extra_benefits2: "",
     extra_benefits2_description: "",
@@ -1461,11 +1463,11 @@ const Json = [
     city_id: "Old Buckenham",
     category: "Play",
     extra_benefits1: "Superhost",
-    extra_benefits_description:
+    extra_benefits1_description:
       "Superhosts are experienced, highly rated hosts who are committed to providing great stays for guests.",
     extra_benefits2: "Self check-in",
     extra_benefits2_description: "Check yourself in with the lockbox.",
-    extra_benefits3: "Free cancellation for 48 hours",
+    extra_benefits3: "Free cancellation",
     extra_benefits3_description: "",
     amenity1: "Kitchen",
     amenity2: "Wifi",
@@ -1512,7 +1514,7 @@ const Json = [
     city_id: "Copenhagen",
     category: "Play",
     extra_benefits1: "Superhost",
-    extra_benefits_description:
+    extra_benefits1_description:
       "Superhosts are experienced, highly rated hosts who are committed to providing great stays for guests.",
     extra_benefits2: "",
     extra_benefits2_description: "",
@@ -1563,7 +1565,7 @@ const Json = [
     city_id: "Ospedalicchio",
     category: "Adapted",
     extra_benefits1: "Great location",
-    extra_benefits_description:
+    extra_benefits1_description:
       "100% of recent guests gave the location a 5-star rating.",
     extra_benefits2: "",
     extra_benefits2_description: "",
@@ -1614,11 +1616,11 @@ const Json = [
     city_id: "Acapulco",
     category: "Adapted",
     extra_benefits1: "Dedicated worksapce",
-    extra_benefits_description:
+    extra_benefits1_description:
       "A private room with wifi that’s well-suited for working.",
     extra_benefits2: "Self check-in",
     extra_benefits2_description: "You can check in with the doorman",
-    extra_benefits3: "Free cancellation for 48 hours",
+    extra_benefits3: "Free cancellation",
     extra_benefits3_description: "",
     amenity1: "Kitchen",
     amenity2: "Wifi",
@@ -1665,7 +1667,7 @@ const Json = [
     city_id: "Bacalar",
     category: "Treehouses",
     extra_benefits1: "Self check-in",
-    extra_benefits_description: "Check yourself in with the lockbox.",
+    extra_benefits1_description: "Check yourself in with the lockbox.",
     extra_benefits2: "",
     extra_benefits2_description: "",
     extra_benefits3: "",
@@ -1715,7 +1717,7 @@ const Json = [
     city_id: "Uvita",
     category: "Treehouses",
     extra_benefits1: "Superhost",
-    extra_benefits_description:
+    extra_benefits1_description:
       "Superhosts are experienced, highly rated hosts who are committed to providing great stays for guests.",
     extra_benefits2: "",
     extra_benefits2_description: "",
@@ -1766,7 +1768,7 @@ const Json = [
     city_id: "Conversano",
     category: "Historical homes",
     extra_benefits1: "Dedicated workspace",
-    extra_benefits_description:
+    extra_benefits1_description:
       "A common area with wifi that's well-suited for working. ",
     extra_benefits2: "",
     extra_benefits2_description: "",
@@ -1817,12 +1819,12 @@ const Json = [
     city_id: "Amelia",
     category: "Historical homes",
     extra_benefits1: "Dedicated workspace",
-    extra_benefits_description:
+    extra_benefits1_description:
       "A common area with wifi that's well-suited for working. ",
     extra_benefits2: "Great location",
     extra_benefits2_description:
       "100% of recent guests gave the location a 5-star rating.",
-    extra_benefits3: "Free cancellation for 48 hours",
+    extra_benefits3: "Free cancellation",
     extra_benefits3_description: "",
     amenity1: "Mountain view",
     amenity2: "Wifi",
@@ -1868,8 +1870,8 @@ const Json = [
     state: "Colorado",
     city_id: "Colorado Springs",
     category: "Golfing",
-    extra_benefits1: "Free cancellation for 48 hours",
-    extra_benefits_description: "",
+    extra_benefits1: "Free cancellation",
+    extra_benefits1_description: "",
     extra_benefits2: "",
     extra_benefits2_description: "",
     extra_benefits3: "",
@@ -1919,11 +1921,11 @@ const Json = [
     city_id: "Breckenridge",
     category: "Golfing",
     extra_benefits1: "Self check-in",
-    extra_benefits_description: "Check yourself in with the lockbox.",
+    extra_benefits1_description: "Check yourself in with the lockbox.",
     extra_benefits2: "Great location",
     extra_benefits2_description:
       "100% of recent guests gave the location a 5-star rating.",
-    extra_benefits3: "Free cancellation for 48 hours",
+    extra_benefits3: "Free cancellation",
     extra_benefits3_description: "",
     amenity1: "Mountain view",
     amenity2: "Kitchen",
@@ -1969,9 +1971,9 @@ const Json = [
     city_id: "Victor",
     category: "Golfing",
     extra_benefits1: "Great location",
-    extra_benefits_description:
+    extra_benefits1_description:
       "100% of recent guests gave the location a 5-star rating.",
-    extra_benefits2: "Free cancellation for 48 hours",
+    extra_benefits2: "Free cancellation",
     extra_benefits2_description: "",
     extra_benefits3: "",
     extra_benefits3_description: "",
@@ -2020,7 +2022,7 @@ const Json = [
     city_id: "Grand Teton",
     category: "Golfing",
     extra_benefits1: "Superhost",
-    extra_benefits_description:
+    extra_benefits1_description:
       "Superhosts are experienced, highly rated hosts who are committed to providing great stays for guests.",
     extra_benefits2: "Self check-in",
     extra_benefits2_description: "Check yourself in with the lockbox.",

@@ -1,0 +1,25 @@
+.button {
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  border-radius: 50%;
+  border: 1px solid grey;
+  position: relative;
+  cursor: pointer;
+}
+
+.overlay {
+  width: 27px;
+  height: 27px;
+  background-color: grey;
+  opacity: 0.1;
+  border-radius: 50%;
+  border: 1px solid grey;
+  position: absolute;
+  top: 0;
+  left: 0px;
+}
+
+.hidden {
+  display: none;
+}

@@ -1,0 +1,71 @@
+.reservationcontainer {
+  padding: 25px;
+  border: 1px solid grey;
+  width: 330px;
+  border-radius: 10px;
+  margin-top: 40px;
+}
+
+.pickerscontainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 0px;
+  width: 330px;
+}
+
+.pricecontainer {
+  display: flex;
+  gap: 4px;
+  align-items: flex-end;
+  margin-bottom: 15px;
+}
+
+.number {
+  font-size: 1.3rem;
+}
+
+.night {
+  font-size: 1rem;
+  color: black;
+}
+
+.aligner {
+  display: flex;
+  justify-content: space-between;
+}
+
+.underline {
+  font-family: var(--montserrat-font);
+  font-weight: 400;
+  font-size: 16px;
+  color: rgb(34, 34, 34);
+  margin-top: 15px;
+}
+
+.adding {
+  font-family: var(--montserrat-font);
+  font-weight: 400;
+  font-size: 16px;
+  color: rgb(34, 34, 34);
+  margin-top: 15px;
+}
+
+.total {
+  font-family: var(--montserrat-font);
+  font-weight: 600;
+  font-size: 16px;
+  margin-top: 15px;
+}
+
+.spacer {
+  margin-top: 15px;
+  color: grey;
+}
+
+.centered {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 10px;
+}

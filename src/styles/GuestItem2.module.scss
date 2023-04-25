@@ -1,0 +1,34 @@
+.itemwrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+  width: 289px;
+}
+
+.incrementorgroup {
+  display: flex;
+  justify-content: space-between;
+  width: 105px;
+  align-items: center;
+}
+
+.category {
+  font-family: var(--montserrat-font);
+  font-weight: 500;
+  font-size: 0.9rem;
+  margin-bottom: 4px;
+}
+
+.descriptor {
+  font-family: var(--montserrat-font);
+  font-weight: 400;
+  font-size: 0.85rem;
+}
+
+.number {
+  font-family: var(--montserrat-font);
+  font-weight: 400;
+  font-size: 1rem;
+}

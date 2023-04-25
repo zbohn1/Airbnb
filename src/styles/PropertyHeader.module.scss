@@ -1,0 +1,15 @@
+.header {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  padding: 15px 160px;
+  background-color: white;
+  border-bottom: 1px solid #ebebeb;
+  position: relative;
+  z-index: 6;
+  position: relative;
+}
+
+.logo {
+  width: 100px;
+}

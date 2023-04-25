@@ -1,0 +1,11 @@
+.datecontainer {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  align-items: flex-start;
+}
+
+.datepicker {
+  width: 160px;
+  height: 25;
+}

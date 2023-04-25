@@ -1,0 +1,30 @@
+.container {
+}
+
+.header {
+  font-size: 1.3rem;
+  color: black;
+  font-family: var(--montserrat-font);
+  font-weight: 500;
+}
+
+.subheader {
+  font-family: var(--montserrat-font);
+  font-weight: 400;
+  margin-top: 10px;
+}
+
+.hostImg {
+  width: 60px;
+  border-radius: 50%;
+}
+
+.flexContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 660px;
+  margin-top: 40px;
+  border-bottom: 1px solid #dedede;
+  padding: 0px 0px 20px 0px;
+}

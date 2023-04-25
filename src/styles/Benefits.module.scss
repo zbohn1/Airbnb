@@ -1,0 +1,39 @@
+.amenityFlex {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 20px;
+}
+
+.flexDiv {
+  width: 310px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.spacer {
+  width: 70px;
+}
+
+.title {
+  font-size: 1.2rem;
+  color: black;
+  font-family: var(--montserrat-font);
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.amenityText {
+  font-size: 0.9rem;
+  color: black;
+  font-family: var(--montserrat-font);
+  font-weight: 400;
+}
+
+.outerContainer {
+  padding-top: 40px;
+  border-top: 1px solid #dedede;
+  margin-top: 40px;
+}
